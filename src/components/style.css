@@ -13,10 +13,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-content: space-between;
   }
   
   .increment-button,
-  .decrement-button{
+  .decrement-button,
+  .reset-button{
     padding: 10px 20px;
     font-size: 1.5rem;
     cursor: pointer;
@@ -25,7 +27,6 @@
     margin: 0 10px;
     background-color: #007bff;
     color: #fff;
-    flex: 1;
     transition: background-color 0.3s;
   }
   

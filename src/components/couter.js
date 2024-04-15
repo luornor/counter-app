@@ -5,6 +5,7 @@ function CounterApp() {
   // useState Hook to manage the counter value
   const [counter, setCounter] = useState(0);
 
+
   // useEffect Hook to update the document title with the counter value
   useEffect(() => {
     document.title = `Counter: ${counter}`;
@@ -13,13 +14,22 @@ function CounterApp() {
 
   // Function to increment the counter
   const incrementCounter = () => {
-    setCounter(prevCounter => prevCounter + 1);
+    setCounter(
+      prevCounter =>{
+        return prevCounter + 1
+      }
+    );
   };
 
   // Function to decrement the counter
   const decrementCounter = () => {
-    setCounter(prevCounter => prevCounter - 1);
+    setCounter(
+      prevCounter =>{
+        return prevCounter - 1
+      }
+    );
   };
+
 
   return (
     <div className='counter-container'>
@@ -28,9 +38,7 @@ function CounterApp() {
       <div className='button-container'>
       <button className='increment-button' onClick={incrementCounter}>Increment</button>
       <button className='decrement-button' onClick={decrementCounter}>Decrement</button>
-      
       </div>
-      
     </div>
   );
 }
